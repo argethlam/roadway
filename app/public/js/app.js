@@ -2,15 +2,21 @@ $(document).ready(function()
 {
 	$('button.click').on('click', function()
 	{
-		console.log('test');
-		// var ajaxParams = {};
-		// ajaxParams['page'] = pageNum;
+		var btnNumber = $(this).data('id');
+		var ajaxParams = {};
+
+		alreadyPressed.push(btnNumber);
+		
+		// ajaxParams['btn_id'] = btnNumber;
+		ajaxParams['action'] = 'get_suggestions';
+		ajaxParams['btn_ids'] = alreadyPressed;
 
 		// Call callAjax function to get response
-		// var response = callAjax(method, 'get', 'html', ajaxParams);
+		var response = callAjax('index.php', 'post', 'html', ajaxParams);
 	});
 });
 
+var alreadyPressed = [];
 
 /**
  * This function will execute ajax call with given params and will return response
