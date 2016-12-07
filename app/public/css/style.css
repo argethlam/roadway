@@ -1,0 +1,39 @@
+<style>
+	/** CSS style */
+	body {
+		margin: auto;
+	}
+
+	div.container {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	.content {
+		min-width: 250px;
+	}
+
+	.content table {
+		width: 200px;
+	}
+
+	.content textarea {
+		height: 70px;
+		width: 190px;
+	}
+
+	.content button {
+		background: #3f99eb;
+		cursor: pointer;
+		height: 30px;
+		width: 60px;
+	}
+
+	button.disabled {
+		color: #d3d2da;
+		cursor: default;
+	}
+
+</style>
